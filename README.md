@@ -47,9 +47,8 @@ src/
 ```
 
 ![Login Screen](./src/img/print_LoginScreen.jpg)
-![Index](image-2.png)
-![alt text](image-3.png)
-![alt text](image-4.png)
+![Index](./src/img/Categorias-Bolsas.jpg)
+![Detalhes](./src/img/Detalhes.jpg)
 
 ---
 
