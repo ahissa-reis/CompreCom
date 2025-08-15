@@ -51,6 +51,3 @@ src/
 ![Detalhes](./src/img/Detalhes.jpg)
 
 ---
-
-### Observações finais
-
