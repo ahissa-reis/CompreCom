@@ -4,11 +4,9 @@ import colors from '@theme/colors';
 import { StyleSheet, Text, View } from 'react-native';
 import CategoryListScreen from './CategoryListScreen';
 
-// Tab navigators
 const Tab = createMaterialTopTabNavigator();
 const GroupTab = createMaterialTopTabNavigator();
 
-// Títulos amigáveis
 const CATEGORY_TITLES: Record<CategoryKey, string> = {
   'mens-shirts': 'Camisas',
   'mens-shoes': 'Sapatos',
@@ -20,7 +18,6 @@ const CATEGORY_TITLES: Record<CategoryKey, string> = {
   'womens-watches': 'Relógios'
 };
 
-// Wrapper que mostra o título da categoria + lista de produtos
 function CategoryScreenWithTitle({ category }: { category: CategoryKey }) {
   return (
     <View style={styles.container}>
@@ -32,19 +29,16 @@ function CategoryScreenWithTitle({ category }: { category: CategoryKey }) {
   );
 }
 
-// === Componentes estáticos para categorias de homens ===
 function MensShirtsScreen() { return <CategoryScreenWithTitle category="mens-shirts" />; }
 function MensShoesScreen() { return <CategoryScreenWithTitle category="mens-shoes" />; }
 function MensWatchesScreen() { return <CategoryScreenWithTitle category="mens-watches" />; }
 
-// === Componentes estáticos para categorias de mulheres ===
 function WomensBagsScreen() { return <CategoryScreenWithTitle category="womens-bags" />; }
 function WomensDressesScreen() { return <CategoryScreenWithTitle category="womens-dresses" />; }
 function WomensJewelleryScreen() { return <CategoryScreenWithTitle category="womens-jewellery" />; }
 function WomensShoesScreen() { return <CategoryScreenWithTitle category="womens-shoes" />; }
 function WomensWatchesScreen() { return <CategoryScreenWithTitle category="womens-watches" />; }
 
-// === GroupTabs para homens ===
 function MenGroupTabs() {
   return (
     <GroupTab.Navigator
@@ -66,7 +60,6 @@ function MenGroupTabs() {
   );
 }
 
-// === GroupTabs para mulheres ===
 function WomenGroupTabs() {
   return (
     <GroupTab.Navigator
@@ -90,7 +83,6 @@ function WomenGroupTabs() {
   );
 }
 
-// === Navigator principal ===
 export default function ProductsTabsScreen() {
   return (
     <Tab.Navigator
